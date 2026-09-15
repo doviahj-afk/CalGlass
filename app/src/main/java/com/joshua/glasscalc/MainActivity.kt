@@ -207,14 +207,11 @@ fun FormulaWorkspace(state: CalcUiState, vm: CalculatorViewModel) {
                     onValueChange = vm::onFormulaNameChange,
                     textStyle = TextStyle(color = TextPrimary, fontSize = 16.sp),
                     modifier = Modifier.fillMaxWidth(),
-                    decorationBox = { innerTextField: @Composable () -> Unit ->
-    ...
-    innerTextField()
-}
+                    decorationBox = { innerTextField ->
                         if (state.formulaName.isEmpty()) {
                             Text("Formula name…", color = TextSecondary, fontSize = 16.sp)
                         }
-                        inner()
+                        innerTextField()
                     }
                 )
                 Spacer(Modifier.height(12.dp))
