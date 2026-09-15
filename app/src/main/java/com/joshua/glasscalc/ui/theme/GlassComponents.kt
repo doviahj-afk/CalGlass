@@ -72,7 +72,7 @@ fun GlassPane(
     shape: Shape = RoundedCornerShape(28.dp),
     fillAlphaTop: Float = 0.20f,
     fillAlphaBottom: Float = 0.06f,
-    content: @Composable Box.() -> Unit
+    content: @Composable () -> Unit
 ) {
     Box(
         modifier = modifier
